@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cyber Quiz Arena</title>
+  </head>
+
+  <body>
+    <div class="quiz-container">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">CYBER_DEFENSE_QUIZ.SH</span>
+      </div>
+
+      <!-- כפתורי בחירת קטגוריות -->
+      <div class="categories" id="categories-container">
+        <button class="cat-btn active" onclick="selectCategory('networking')">
+          רשתות
+        </button>
+        <button class="cat-btn" onclick="selectCategory('webSecurity')">
+          אבטחת Web
+        </button>
+        <button class="cat-btn" onclick="selectCategory('soc')">
+          SOC & Incident
+        </button>
+        <button class="cat-btn" onclick="selectCategory('os')">
+          מערכות הפעלה
+        </button>
+      </div>
+
+      <!-- גוף השאלה -->
+      <div class="question-box">
+        <span class="badge" id="category-badge">רשתות</span>
+        <h3 id="question-text">טוען שאלה...</h3>
+      </div>
+
+      <!-- 4 תשובות אמריקאיות -->
+      <div class="answers-grid" id="answers-container"></div>
+
+      <!-- אזור משוב וכפתור שאלה הבאה -->
+      <div class="footer-action">
+        <div id="feedback-text"></div>
+        <button id="next-btn" class="next-btn" onclick="loadNextQuestion()">
+          שאלה הבאה ❯
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
